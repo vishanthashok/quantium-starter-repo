@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap");
+
+:root {
+  --pink: #e84a8a;
+  --pink-dark: #c93372;
+  --cream: #fff8f3;
+  --ink: #2b1f24;
+  --muted: #6b5560;
+  --card: #ffffff;
+  --shadow: 0 18px 40px rgba(43, 31, 36, 0.12);
+  --radius: 18px;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(145deg, #fff0f6 0%, #fff8f3 45%, #f7ece8 100%);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(232, 74, 138, 0.12);
+  color: var(--pink-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(232, 74, 138, 0.12);
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  margin: 0 0 16px;
+}
+
+.region-radio .form-check {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.region-radio label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(232, 74, 138, 0.2);
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.region-radio label:hover {
+  border-color: var(--pink);
+  transform: translateY(-1px);
+}
+
+.region-radio input[type="radio"] {
+  accent-color: var(--pink);
+}
+
+.chart-panel {
+  padding: 20px 16px 8px;
+}
+
+.chart-panel .js-plotly-plot {
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 16px 48px;
+  }
+
+  .panel {
+    padding: 20px 18px;
+  }
+
+  .region-radio label {
+    width: calc(50% - 8px);
+    justify-content: center;
+    margin-right: 0;
+  }
+}
